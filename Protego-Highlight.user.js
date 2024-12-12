@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Protego - Highlight
 // @namespace    http://tampermonkey.net/
-// @version      1.0.0
+// @version      1.0.1
 // @description  Zvýrazní jméno na Protegu!
 // @author       Wagaga
 // @match        https://www.protego.cz/system/chat/index.php*
@@ -11,7 +11,7 @@
 
 (async function() {
     'use strict';
-    const regex = /((Svetl|Ston|Světl)\w*)/gi;
+    const regex = /(\s(Svetl|Ston|Světl)\w*)/gi;
     let elements = document.getElementsByClassName("m-co");
     let msgBoard = document.getElementById("messBg");
     let hit;
